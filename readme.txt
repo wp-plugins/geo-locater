@@ -17,7 +17,7 @@ Visitor can also perform specific search to find stores/offices on specific loca
 
 Its uses Google Geocoding javascript API V3.
 
-This is shortcode based plugin to easily configure on any page withis your wordpress site.
+This is shortcode based plugin to easily configure on any page within your Wordpress site.
 
 == Installation ==
 
