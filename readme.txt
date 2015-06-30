@@ -11,7 +11,7 @@ Add a office/store locator map to your site and lets your visitors to start find
 
 == Description ==
 
-Geo Locator is office/store locating plugin for any business that needs to let customers search online for their stores & offices. It will auto detect user location via HTML-5 and display near by address of to visitor. 
+Geo Locator is office/store locating plugin for any business that needs to let customers search online for their stores & offices. It will auto detect user location via HTML-5 and display visitor's near by stores/offices on the map. 
 
 Visitor can also perform specific search to find stores/offices on specific location. Its auto suggestion functionality helps visitor to narrow their search and serve exactly what they are looking for.
 
