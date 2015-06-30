@@ -3,6 +3,7 @@ Contributors: nkmaurya
 Tags: geo coding, geo location,location search, google map, nearby location,store finder
 Requires at least: 3.5
 Tested up to: 4.2.2
+Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -44,7 +45,7 @@ Click on "Geo Locater->settings" from the Admin Menu side bar, Here on this page
 
 ### Get Short code ###
 
-Click on "Geo Locater->Locater Shortcode", Here you can get shortcode.
+Click on "Geo Locater->Locater Shortcode" from the Admin Menu side bar, Here you can get shortcode.
 
 == Changelog ==
 
