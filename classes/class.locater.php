@@ -86,30 +86,42 @@ class Locater {
                     'label' => __('Address', 'location'),
                     'id' => 'address_loc',
                     'type' => 'text',
+                    'class'=>'',
                     'desc' => __('Write address here.', 'location')
                 ),
                 array(
                     'label' => __('City', 'location'),
                     'id' => 'address_city',
                     'type' => 'text',
+                    'class'=>'',
                     'desc' => __('Write City Name.', 'location'),
                 ),
                 array(
                     'label' => __('Country', 'location'),
                     'id' => 'address_country',
                     'type' => 'text',
+                    'class'=>'',
                     'desc' => __('Write country Name.', 'location'),
+                ),
+                array(
+                    'label' => __('&nbsp;', 'location'),
+                    'id' => 'get_lat_long',
+                    'type' => 'button',
+                    'class'=> 'button button-primary button-large coordinates',
+                    'desc' => __('Get Co-ordinates.', 'location'),
                 ),
                 array(
                     'label' => __('Longitude', 'location'),
                     'id' => 'address_long',
                     'type' => 'text',
+                    'class'=>'',
                     'desc' => __('Write Longitude.', 'location'),
                 ),
                 array(
                     'label' => __('Latitude', 'location'),
                     'id' => 'address_lat',
                     'type' => 'text',
+                    'class'=>'',
                     'desc' => __('Write Latitude.', 'location'),
                 ),
             )
@@ -136,12 +148,18 @@ class Locater {
 
         <?php
         foreach ($metabox_fields['args'] as $field) {
-            if ($field['type'] == 'text') {
+            if ($field['type'] == 'text' || $field['type'] == 'button') {
                 $entries = Locater_Api::get_locater_post_entries($object->ID);
                 ?>
-                    <label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label>
-                    <input id="<?php echo $field['id']; ?>" name="<?php echo $field['id']; ?>" type="<?php echo $field['type']; ?>" value="<?php echo esc_attr(@$entries[$field['id']]); ?>">
+                    <?php if ($field['type'] == 'button') { ?>
+                        <label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label>
+                    <input id="<?php echo $field['id']; ?>" name="<?php echo $field['id']; ?>" type="<?php echo $field['type']; ?>" value="<?php echo $field['desc']; ?>" class="<?php echo $field['class']; ?>" >
+ <br>
+                        <?php }else{ ?>
+                     <label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label>
+                    <input id="<?php echo $field['id']; ?>" name="<?php echo $field['id']; ?>" type="<?php echo $field['type']; ?>" value="<?php echo esc_attr(@$entries[$field['id']]); ?>" class="<?php echo $field['class']; ?>" >
 
+                       <?php  }  ?>
                     <br>
 
             <?php } else { ?>
@@ -149,8 +167,6 @@ class Locater {
                     <textarea id="<?php echo $field['id']; ?>" name="<?php echo $field['id']; ?>" rows="<?php echo $field['rows']; ?>" ><?php echo esc_attr(@$entries[$field['id']]); ?></textarea>
                 <?php }
             } ?>
-            <label for="">&nbsp;</label>
-            <input type="button" value="Get Co-ordinates"  id="get_lat_long" class="button button-primary button-large coordinates" name="save">
             <input type="hidden" value="<?php echo get_option('locater_google_api_key') ?>" id="locater_google_api_key">
         </div>
         <?php
