@@ -4,9 +4,9 @@ defined( 'ABSPATH' ) or die( 'Direct access to file is not allowed' );
 Plugin Name: Geo Locater
 Description: This is a very simple address locator map added to your site and lets your visitors to start finding you quickly!.
 Author: Nitin Maurya
-Version: 1.0
+Version: 1.1
 Author URI:http://www.kelltontech.com/
-Plugin URI:https://wordpress.org/plugins/geo-locater
+Plugin URI:https://wordpress.org/plugins/geo-locater/
 */
 
 require_once 'classes/class.locater.php';

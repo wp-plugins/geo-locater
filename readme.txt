@@ -49,5 +49,8 @@ Click on "Geo Locater->Locater Shortcode" from the Admin Menu side bar, Here you
 
 == Changelog ==
 
+= 1.1 =
+Some adjustment in design layout
+
 = 1.0 =
 * This is the first release of the plugin.
